@@ -9,14 +9,18 @@
 <GraphParameters>
 <GraphParameterFile fileURL="workspace.prm"/>
 </GraphParameters>
+<RichTextNote backgroundColor="FAF6D6" folded="false" fontSize="medium" height="153" id="Note0" textColor="444444" width="264" x="53" y="66">
+<attr name="text"><![CDATA[h3. New Note]]></attr>
+</RichTextNote>
 <Dictionary/>
 </Global>
 <Phase number="0">
-<Node guiName="DataGenerator" guiX="178" guiY="157" id="DATA_GENERATOR" recordsNumber="10000000" type="DATA_GENERATOR">
+<Node guiName="DataGenerator" guiX="53" guiY="285" id="DATA_GENERATOR" recordsNumber="10000000" type="DATA_GENERATOR">
 <attr name="generate"><![CDATA[//#CTL2
 
 // Generates output record.
 function integer generate() {
+	// comment
 	$out.0.field1 = randomString(3,5);
 
 	return ALL;
@@ -42,7 +46,7 @@ function integer generate() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node fileURL="${DATAOUT_DIR}/big-data.txt" guiName="UniversalDataWriter" guiX="464" guiY="158" id="UNIVERSAL_DATA_WRITER" type="DATA_WRITER"/>
+<Node fileURL="${DATAOUT_DIR}/big-data.txt" guiName="UniversalDataWriter" guiX="339" guiY="286" id="UNIVERSAL_DATA_WRITER" type="DATA_WRITER"/>
 <Edge fromNode="DATA_GENERATOR:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="UNIVERSAL_DATA_WRITER:0"/>
 </Phase>
 </Graph>
